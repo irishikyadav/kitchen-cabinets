@@ -1,11 +1,11 @@
 // src/components/Gallery.jsx
 const gallery = [
-  "/images/gallery/closeup-1.jpg",
-  "/images/gallery/closeup-2.jpg",
-  "/images/gallery/closeup-3.jpg",
-  "/images/gallery/closeup-4.jpg",
-  "/images/gallery/closeup-5.jpg",
-  "/images/gallery/closeup-6.jpg",
+  "/images/pexels-anabella-castro-3934663-6264414.jpg",
+  "/images/pexels-houzlook-3926542.jpg",
+  "/images/pexels-curtis-adams-1694007-10827406.jpg",
+  "/images/pexels-artbovich-6969864.jpg",
+  "/images/pexels-artbovich-6903246.jpg",
+  "/images/pexels-artbovich-6283972.jpg",
 ];
 
 const Gallery = () => (
