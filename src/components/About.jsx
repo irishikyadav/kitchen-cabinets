@@ -28,7 +28,7 @@ const About = () => (
             <div className="w-16 h-16 rounded-3xl bg-gradient-to-r from-rose-100 to-pink-100 border-4 border-white/50 mx-auto flex items-center justify-center mb-2 shadow-lg">
               <span className="text-rose-500 font-bold text-xl">🏠</span>
             </div>
-            <p className="text-sm font-semibold text-slate-700">Wellington-based</p>
+            <p className="text-sm font-semibold text-slate-700">Auckland-based</p>
           </div>
           <div className="text-center">
             <div className="w-16 h-16 rounded-3xl bg-gradient-to-r from-indigo-100 to-purple-100 border-4 border-white/50 mx-auto flex items-center justify-center mb-2 shadow-lg">
