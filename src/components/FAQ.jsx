@@ -19,18 +19,28 @@ const faqs = [
 ];
 
 const FAQ = () => (
-  <section className="space-y-6">
-    <h2 className="text-3xl font-semibold">Questions we’re often asked</h2>
-    <div className="grid md:grid-cols-2 gap-4">
-      {faqs.map((item) => (
+  <section className="space-y-8">
+    <h2 className="text-3xl font-bold text-slate-800 mb-4">Questions we're often asked</h2>
+    <p className="text-slate-600 text-lg max-w-2xl mb-12 leading-relaxed">
+      Everything you need to know before starting your cabinet project with us.
+    </p>
+    <div className="grid md:grid-cols-2 gap-6">
+      {faqs.map((item, index) => (
         <div
           key={item.q}
-          className="rounded-2xl border border-slate-800 bg-slate-900/60 p-4"
+          className="group bg-white/70 backdrop-blur-sm rounded-3xl border border-rose-100/50 shadow-lg hover:shadow-2xl hover:bg-white/95 hover:-translate-y-2 transition-all duration-400 p-8 cursor-pointer"
         >
-          <h3 className="text-sm font-semibold mb-1">{item.q}</h3>
-          <p className="text-[11px] text-slate-300 leading-relaxed">
-            {item.a}
-          </p>
+          {/* FAQ number */}
+          <div className="flex items-center gap-3 mb-4 pb-4 border-b border-rose-100/50">
+            <div className="w-10 h-10 rounded-2xl bg-gradient-to-r from-rose-100 to-pink-100 border-2 border-rose-200/60 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+              <span className="text-rose-500 font-bold text-sm">{index + 1}</span>
+            </div>
+            <h3 className="text-xl font-bold text-slate-800 group-hover:text-rose-600 transition-colors duration-300 flex-1">
+              {item.q}
+            </h3>
+          </div>
+          
+          <p className="text-slate-600 leading-relaxed text-base">{item.a}</p>
         </div>
       ))}
     </div>

@@ -13,11 +13,10 @@ import Footer from "./components/Footer";
 
 function App() {
   return (
-    <div className="min-h-screen bg-slate-950 text-slate-100">
-      {/* background art */}
-      <div className="fixed inset-0 -z-10 bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950" />
-      <div className="fixed inset-0 -z-10 opacity-40 bg-[radial-gradient(circle_at_top,_rgba(250,204,21,0.08),_transparent_60%),radial-gradient(circle_at_bottom,_rgba(56,189,248,0.08),_transparent_55%)]" />
-
+    <div className="min-h-screen bg-gradient-to-br from-rose-50 via-pink-50 to-indigo-50 text-slate-800">
+      {/* subtle background pattern */}
+      <div className="fixed inset-0 -z-10 opacity-20 bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(120,119,198,0.3),rgba(255,119,198,0.1))] pointer-events-none" />
+      
       <Navbar />
       <main className="max-w-6xl mx-auto px-4 pt-24 pb-24 space-y-28">
         <section id="home">

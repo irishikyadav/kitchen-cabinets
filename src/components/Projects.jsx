@@ -36,37 +36,48 @@ const Projects = () => (
   <section className="space-y-6">
     <div className="flex items-end justify-between gap-4">
       <div>
-        <h2 className="text-3xl font-semibold">Recent cabinet projects</h2>
-        <p className="text-slate-300 text-sm max-w-2xl mt-2">
+        <h2 className="text-3xl font-bold text-slate-800">Recent cabinet projects</h2>
+        <p className="text-slate-600 text-lg max-w-2xl mt-2 leading-relaxed">
           A mix of full new kitchen builds, refacing projects, and custom
           storage installations.
         </p>
       </div>
       <a
         href="#contact"
-        className="hidden md:inline-flex text-xs rounded-full border border-slate-700 px-4 py-2 text-slate-200"
+        className="hidden md:inline-flex px-6 py-3 rounded-2xl bg-gradient-to-r from-rose-400/90 to-pink-400/90 text-white font-semibold shadow-lg hover:shadow-xl hover:from-rose-500 hover:to-pink-500 transition-all duration-300"
       >
         Start a project like these
       </a>
     </div>
 
     <div className="grid gap-6 md:grid-cols-3">
-      {projects.map((project) => (
+      {projects.map((project, index) => (
         <article
           key={project.name}
-          className="group overflow-hidden rounded-2xl border border-slate-800 bg-slate-900/40 shadow-[0_18px_60px_rgba(15,23,42,0.8)]"
+          className="group bg-white/70 backdrop-blur-sm rounded-3xl border border-rose-100/50 shadow-lg hover:shadow-2xl hover:-translate-y-3 hover:bg-white/95 transition-all duration-500 overflow-hidden cursor-pointer"
         >
-          <div className="relative h-40 overflow-hidden">
+          {/* Image with overlay */}
+          <div className="relative h-56 overflow-hidden rounded-t-3xl">
             <img
               src={project.image}
               alt={project.name}
-              className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+              className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-110"
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-slate-950/10 to-transparent opacity-80" />
+            <div className="absolute inset-0 bg-gradient-to-t from-rose-500/10 via-white/30 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500" />
           </div>
-          <div className="p-4 space-y-1">
-            <h3 className="text-sm font-semibold">{project.name}</h3>
-            <p className="text-[11px] text-slate-300">{project.details}</p>
+          
+          {/* Content */}
+          <div className="p-6 space-y-2">
+            <div className="flex items-center gap-2 text-xs text-rose-500 font-semibold uppercase tracking-wide">
+              <span className="w-6 h-6 rounded-full bg-rose-100 flex items-center justify-center text-[10px] font-bold">
+                {index + 1}
+              </span>
+              Project
+            </div>
+            <h3 className="text-xl font-bold text-slate-800 group-hover:text-rose-600 transition-colors duration-300">
+              {project.name}
+            </h3>
+            <p className="text-slate-600 leading-relaxed text-sm">{project.details}</p>
           </div>
         </article>
       ))}
